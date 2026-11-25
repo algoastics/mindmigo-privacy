@@ -16,6 +16,7 @@
   main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
   h1 { font-size: 34px; line-height: 1.2; margin: 0 0 6px; }
   h2 { font-size: 21px; margin: 36px 0 8px; color: var(--green); }
+  h3 { font-size: 18px; margin: 22px 0 6px; }
   p, li { margin: 0 0 12px; }
   ul { padding-left: 22px; margin: 0 0 12px; }
   .meta { color: var(--muted); margin-bottom: 28px; }
@@ -27,7 +28,7 @@
 <body>
 <main>
   <h1>MindMigo Privacy Policy</h1>
-  <p class="meta">Effective 24 November 2026. App: MindMigo: Reel Limit Counter (Android), by Algoastics Labs.</p>
+  <p class="meta">Effective 24 November 2026. Last updated 25 November 2026. App: MindMigo: Reel Limit Counter (Android), by Algoastics Labs.</p>
 
   <div class="box">
     <strong>In short:</strong> MindMigo has no account and no server. Your counts, your limit, your streak and your
@@ -35,16 +36,30 @@
   </div>
 
   <h2>What MindMigo does</h2>
-  <p>MindMigo counts the short videos (&ldquo;reels&rdquo;) you watch in apps you choose, shows a small counter, and
-  shows a calm pause screen when you reach the daily limit you set.</p>
+  <p>MindMigo counts the short videos (&ldquo;reels&rdquo;) you watch in Instagram Reels, YouTube Shorts and TikTok,
+  and shows your count on a small counter you can turn off. When you reach the daily limit you set, it shows a Stop
+  screen over the reels. Chats, search and posts keep working.</p>
 
-  <h2>Information stored on your phone</h2>
+  <h2>What MindMigo stores on your phone</h2>
+  <p>All of this stays in the app&rsquo;s private storage on your phone. None of it is sent anywhere. We cannot see it.</p>
   <ul>
-    <li>How many reels you watched each day, and in which of the apps you chose.</li>
-    <li>The daily limit you set, your streak, and your settings (for example theme and badge options).</li>
-    <li>Your answers during setup (for example your usual number of reels), used to suggest a limit.</li>
+    <li>Your reel counts for each day and each app, and the number of ads it skipped.</li>
+    <li>When each counted reel started and how long you stayed on it, which gives your daily receipt (reels and time
+    in reels) and your week.</li>
+    <li>A scrambled marker for each reel counted today, so the same reel is not counted twice. It cannot be turned
+    back into the reel.</li>
+    <li>Which positions in the app&rsquo;s reel list you have already seen today (numbers only, no text or content),
+    so a restart does not count the same reels again. This is cleared when you delete your data.</li>
+    <li>Your daily limit, the limit that applied each day, your streak, and the days you paused protection.</li>
+    <li>Your settings, and the answers you gave when you set up (for example your usual number of reels), which are
+    used to suggest a limit.</li>
+    <li>Short technical records of whether counting is working (for example when the Accessibility service was turned
+    off).</li>
   </ul>
-  <p>This information is kept in the app&rsquo;s private storage on your phone. It is not sent anywhere. We cannot see it.</p>
+
+  <h2>How long it is kept</h2>
+  <p>The detailed per-reel records and the technical records are deleted automatically after 30 days. Daily totals
+  stay on your phone until you delete them or uninstall MindMigo.</p>
 
   <h2>Information we do not collect</h2>
   <ul>
@@ -55,43 +70,84 @@
   </ul>
 
   <h2>The Accessibility permission</h2>
-  <p>To count reels, MindMigo uses Android&rsquo;s Accessibility service. It uses:</p>
+  <p>MindMigo needs Android&rsquo;s Accessibility service to count reels and stop them at your limit. Before it sends
+  you to Android&rsquo;s settings, the app explains this and you can decline. If you decline, MindMigo still opens,
+  but it cannot count or stop reels.</p>
+
+  <h3>What it reads</h3>
   <ul>
-    <li>which app is in front, only for the reel apps MindMigo supports (Instagram Reels, YouTube Shorts and TikTok);</li>
-    <li>when a new reel starts in those apps; and</li>
-    <li>where the reel area is on screen, so the pause screen covers only reels.</li>
+    <li>Which app is open, and when a reel scrolls past, in Instagram, YouTube and TikTok only.</li>
+    <li>Where the reel area is on screen, so the Stop screen covers only reels.</li>
+    <li>A &ldquo;Sponsored&rdquo; label, so ads are not counted. No other text on the screen is read.</li>
   </ul>
-  <p>It does not read your messages, passwords, payments or anything you type. It does not capture or record your screen,
-  and it does not look at apps other than the supported ones. Nothing it sees is sent off your phone.</p>
-  <p>MindMigo shows you exactly what it uses and what it never reads before you are taken to Android&rsquo;s settings, and
-  you can decline. You can turn the service off at any time in Android&rsquo;s Accessibility settings; MindMigo then stops
+
+  <h3>What it does at your limit</h3>
+  <ul>
+    <li>Shows a Stop screen over the reels.</li>
+    <li>Asks the reel to pause, by briefly opening a transparent screen that takes no input and exists only while
+    the Stop screen is up. Whether the video actually pauses depends on the other app.</li>
+    <li>Mutes the sound while the Stop screen is up, then puts your sound back when you leave.</li>
+    <li>When you tap Leave reels, takes you out with a tap on the app&rsquo;s Home tab, or Back or Home.</li>
+  </ul>
+
+  <h3>What it never reads</h3>
+  <p>Messages, comments, passwords, payments or what you type. It does not capture or record your screen, and it
+  ignores anything inside other apps. What it reads never leaves your phone.</p>
+
+  <p>You can turn the service off at any time in Android&rsquo;s Settings, under Accessibility. MindMigo then stops
   counting.</p>
 
-  <h2>Notifications</h2>
-  <p>If you allow notifications, MindMigo can show alerts on your phone, for example when you are close to your limit or
-  if counting has stopped. These are created on your phone and are not sent through any server.</p>
+  <h2>Permissions MindMigo uses</h2>
+  <ul>
+    <li><strong>Accessibility service:</strong> to count reels and show the Stop screen, as described above.</li>
+    <li><strong>Notifications</strong> (Android 13 and later asks you): optional alerts, for example when you are
+    close to your limit or if counting has stopped. These are created on your phone and are not sent through any
+    server.</li>
+    <li><strong>Vibration:</strong> small taps when you press buttons.</li>
+    <li><strong>Start after restart</strong> (and keeping the phone awake for short background work): so MindMigo can
+    carry on counting and remind you after your phone restarts.</li>
+    <li><strong>Network status:</strong> Android lets apps check whether the phone is online. MindMigo does not use it
+    to send your data anywhere.</li>
+    <li><strong>Google Play billing:</strong> present for paid features that may come later. It does nothing in this
+    version.</li>
+    <li><strong>Internet:</strong> this version does not use it to send or receive your data.</li>
+  </ul>
+  <p>MindMigo does not use &ldquo;Display over other apps&rdquo;, and it does not ask for your location, contacts,
+  camera, microphone, photos, files or advertising ID.</p>
+
+  <h2>Updates to how MindMigo recognises reels</h2>
+  <p>Instagram, YouTube and TikTok change their screens from time to time. MindMigo can keep up by downloading a
+  small signed settings file that tells it how to recognise reels. This version does not download it. If a later
+  version does, it will be a plain file request: no account, no personal data, and nothing from your phone is sent
+  with it. We will update this page before that happens.</p>
 
   <h2>Your choices and your data</h2>
   <ul>
-    <li><strong>Export:</strong> in the app, Settings &rarr; Privacy and data &rarr; Export my data saves your data to a
-    file in a place you choose.</li>
-    <li><strong>Delete:</strong> Settings &rarr; Privacy and data &rarr; Delete my data removes everything MindMigo stores.
-    Uninstalling the app also removes it.</li>
-    <li><strong>Permissions:</strong> you can withdraw the Accessibility and Notifications permissions at any time in
-    Android&rsquo;s settings.</li>
+    <li><strong>Export:</strong> in the app, Settings &rarr; Privacy and data &rarr; Export my data saves your data
+    to a file in a place you choose.</li>
+    <li><strong>Delete:</strong> Settings &rarr; Privacy and data &rarr; Delete my data removes your counts, history
+    and settings from your phone. Uninstalling the app also removes them.</li>
+    <li><strong>Permissions:</strong> you can turn off the Accessibility and Notifications permissions at any time
+    in Android&rsquo;s settings.</li>
   </ul>
+  <p>Because there is no account and no server, there is nothing for us to look up, correct or delete on our side.</p>
 
   <h2>Sharing</h2>
   <p>We do not share your information with anyone, because we do not have it. If you choose to share your weekly card
   from the app, the image goes only where you send it.</p>
 
+  <h2>If you installed from Google Play</h2>
+  <p>Google Play handles the install. Google may give us anonymous, combined statistics, such as installs and crash
+  counts, under Google&rsquo;s own policy. They are not linked to anything MindMigo stores and contain nothing from
+  inside the app.</p>
+
   <h2>Children</h2>
   <p>MindMigo is meant for people aged 18 and over and is not directed at children.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If we change how MindMigo handles information, we will update this page and its date, and tell you in the app when
-  the change matters. If paid features are added later, payments will be handled by Google Play and this policy will say
-  so before they are switched on.</p>
+  <p>When we change this policy we update the date at the top of the page. If we ever change what the Accessibility
+  service reads, MindMigo asks for your agreement again before it counts anything. If paid features are added later,
+  Google Play will handle the payments and we will say so on this page before they are turned on.</p>
 
   <h2>Contact</h2>
   <p>Questions or requests: <a href="mailto:algoastics@gmail.com">algoastics@gmail.com</a></p>
